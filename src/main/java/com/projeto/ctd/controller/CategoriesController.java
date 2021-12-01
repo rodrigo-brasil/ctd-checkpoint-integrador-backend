@@ -1,5 +1,6 @@
 package com.projeto.ctd.controller;
 
+import com.projeto.ctd.dto.CategoryDTO;
 import com.projeto.ctd.models.Category;
 import com.projeto.ctd.models.Product;
 import com.projeto.ctd.service.IService;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class CategoriesController {
@@ -18,8 +20,8 @@ public class CategoriesController {
     private IService<Category> service;
 
     @GetMapping("/products/categories")
-    public ResponseEntity<List<Category>> getAll(){
-        return ResponseEntity.ok(service.getAll());
+    public ResponseEntity<List<CategoryDTO>> getAll(){
+        return ResponseEntity.ok(service.getAll().stream().map(CategoryDTO::categoryToDTO).collect(Collectors.toList()));
     }
 
 }

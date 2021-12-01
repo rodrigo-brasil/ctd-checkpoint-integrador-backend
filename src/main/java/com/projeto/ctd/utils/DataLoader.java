@@ -7,7 +7,9 @@ import com.projeto.ctd.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class DataLoader implements ApplicationRunner {
 
     private ProductRepository productRepository;
@@ -23,7 +25,7 @@ public class DataLoader implements ApplicationRunner {
 
         //Categories inital data
         categoryRepository.save(new Category("Eletronicos"));
-
+        System.out.println(categoryRepository.save(new Category("Smartphone")));
         //Products inital data
         //productRepository.save(new Product(null,1300.d,"Monitor","4k","https://google.com","id"));
     }
