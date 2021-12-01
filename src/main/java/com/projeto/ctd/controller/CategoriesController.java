@@ -20,8 +20,10 @@ public class CategoriesController {
     private IService<Category> service;
 
     @GetMapping("/products/categories")
-    public ResponseEntity<List<CategoryDTO>> getAll(){
-        return ResponseEntity.ok(service.getAll().stream().map(CategoryDTO::categoryToDTO).collect(Collectors.toList()));
+    public ResponseEntity<List<String>> getAll(){
+        return ResponseEntity.ok(
+                service.getAll().stream().map( CategoryDTO::categoryToDTO).map( c -> c.getName()).collect(Collectors.toList())
+        );
     }
 
 }
