@@ -20,6 +20,7 @@ public class Product {
     private Double price;
     private String title, description, image;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "category_id", nullable = false)
     Category category;
 }
