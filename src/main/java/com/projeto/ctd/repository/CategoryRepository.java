@@ -11,5 +11,5 @@ import java.util.Optional;
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     @Query
-    public List<Category> findByName(String type);
+    public List<Category> findByNameLike(String type);
 }

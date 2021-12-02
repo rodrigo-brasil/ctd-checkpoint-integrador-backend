@@ -28,6 +28,6 @@ public class CategoryService implements IService<Category> {
 
     @Override
     public List<Category> getAllByType(String type) {
-        return null;
+        return repository.findByNameLike(type);
     }
 }

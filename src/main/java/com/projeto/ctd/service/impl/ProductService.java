@@ -33,12 +33,13 @@ public class ProductService implements IService<Product> {
     @Override
     public List<Product> getAllByType(String name) {
         List<Product> products = new ArrayList<>();
-        List<Category> categories = categoryRepository.findByName(name);
+        List<Category> categories = categoryRepository.findByNameLike(name);
+
         if (categories.isEmpty())
             return products;
 
         Long idCategory = categories.get(0).getId();
-        return repository.findAllByCategory(idCategory);
+        return repository.findByCategory(idCategory);
     }
 
 }

@@ -23,13 +23,15 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        Category eletronicos = new Category("Eletronicos");
-        Category smartphone = new Category("Smartphone");
+        Category eletronicos = new Category("eletronicos");
+        Category smartphone = new Category("smartphone");
 
         //Categories inital data
         categoryRepository.save(eletronicos);
         System.out.println(categoryRepository.save(smartphone));
         //Products inital data
         productRepository.save(new Product(null,1300.d,"Monitor","4k","https://google.com",eletronicos));
+        productRepository.save(new Product(null,1300.d,"TV","4k","https://google.com",eletronicos));
+        productRepository.save(new Product(null,1300.d,"s9","64gb","https://google.com",smartphone));
     }
 }

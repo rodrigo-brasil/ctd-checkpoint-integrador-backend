@@ -26,4 +26,10 @@ public class CategoriesController {
         );
     }
 
+    @GetMapping("/category/{category}")
+    public ResponseEntity<List<String>> getCategory(@PathVariable String category){
+        return ResponseEntity.ok(
+                service.getAllByType(category).stream().map(category1 -> category1.getName()).collect(Collectors.toList())
+        );
+    }
 }
