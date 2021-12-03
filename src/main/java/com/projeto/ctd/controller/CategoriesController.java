@@ -18,7 +18,6 @@ public class CategoriesController {
     @Autowired
     private IService<Category> service;
 
-    @CrossOrigin(origins = "https://imagens-react.vercel.app")
     @GetMapping("/products/categories")
     public ResponseEntity<List<String>> getAll(){
         return ResponseEntity.ok(

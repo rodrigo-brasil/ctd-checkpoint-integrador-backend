@@ -17,7 +17,6 @@ public class ProductsController {
     @Autowired
     IService<Product> service;
 
-    @CrossOrigin(origins = "https://imagens-react.vercel.app/")
     @GetMapping
     public ResponseEntity<List<ProductDTO>> getAll(){
         return ResponseEntity.ok(
