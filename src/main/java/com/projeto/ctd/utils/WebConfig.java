@@ -11,6 +11,6 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("https://imagens-react.vercel.app/*");
+        registry.addMapping("/**").allowedOrigins("http://localhost:4200");
     }
 }
