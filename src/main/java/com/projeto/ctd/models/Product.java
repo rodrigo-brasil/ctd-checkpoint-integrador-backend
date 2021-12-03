@@ -18,7 +18,6 @@ public class Product {
     private Long id;
 
     @Column(precision=10, scale=2)
-    @Type(type = "decimal")
     private Double price;
     private String title, description, image;
 
