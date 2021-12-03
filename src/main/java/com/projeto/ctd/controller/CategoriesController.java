@@ -5,7 +5,6 @@ import com.projeto.ctd.models.Category;
 import com.projeto.ctd.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +17,6 @@ public class CategoriesController {
     @Autowired
     private IService<Category> service;
 
-    @CrossOrigin(origins = "https://ctd-checkpoint-integrador-frontend.vercel.app")
     @GetMapping("/products/categories")
     public ResponseEntity<List<String>> getAll(){
         return ResponseEntity.ok(
