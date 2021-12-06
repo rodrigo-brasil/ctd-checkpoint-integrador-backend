@@ -1,5 +1,6 @@
 package com.projeto.ctd.service.impl;
 
+import com.projeto.ctd.exception.ResourceNotFoundException;
 import com.projeto.ctd.models.Category;
 import com.projeto.ctd.repository.CategoryRepository;
 import com.projeto.ctd.service.IService;
@@ -21,11 +22,11 @@ public class CategoryService implements IService<Category> {
 
     @Override
     public Category getById(Long id) {
-        return repository.getById(id);
+        return repository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Categoria não encontrada"));
     }
 
     @Override
-    public List<Category> getAllByType(String type) {
-        return repository.findByNameLike(type);
+    public List<Category> getAllByName(String type) {
+        return repository.findByNameLikeIgnoreCase(type);
     }
 }

@@ -38,7 +38,7 @@ public class ProductsController {
     public ResponseEntity<List<ProductDTO>> getByType(@PathVariable String type){
         System.out.println(type);
         return ResponseEntity.ok(
-                service.getAllByType(type).stream().map(ProductDTO::productToDTO).collect(Collectors.toList())
+                service.getAllByName(type).stream().map(ProductDTO::productToDTO).collect(Collectors.toList())
         );
     }
 

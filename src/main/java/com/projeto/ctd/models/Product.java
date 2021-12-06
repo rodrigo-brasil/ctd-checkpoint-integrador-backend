@@ -18,7 +18,10 @@ public class Product {
 
     @Column(precision=10, scale=2)
     private Double price;
-    private String title, description, image;
+    private String title;
+    @Lob
+    private String description;
+    private String image;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "category_id", nullable = false)

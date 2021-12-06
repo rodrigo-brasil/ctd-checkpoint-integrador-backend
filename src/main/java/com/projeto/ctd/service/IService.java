@@ -8,5 +8,5 @@ public interface IService<T> {
 
     T getById(Long id);
 
-    List<T> getAllByType(String type);
+    List<T> getAllByName(String type);
 }

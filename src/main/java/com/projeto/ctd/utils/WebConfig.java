@@ -13,6 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("https://ctd-checkpoint-integrador-frontend-40q610ztp-hiimgui.vercel.app","https://imagens-react.vercel.app" );
+        registry.addMapping("/**").allowedOrigins("*" );
+//        registry.addMapping("/**").allowedOrigins("https://ctd-checkpoint-integrador-frontend-40q610ztp-hiimgui.vercel.app");
     }
 }
