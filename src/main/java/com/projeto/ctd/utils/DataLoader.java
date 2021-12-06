@@ -50,11 +50,10 @@ public class DataLoader implements ApplicationRunner {
         //Video
         productRepository.save(new Product(null,9499.d,"Smart TV Samsung 65´","4K Neo QLED 65QN85A, Mini Led, 120hz, Processador IA, Tela Infinita, Design Slim, Alexa Built In - QN65QN85AAGXZD","https://drive.google.com/uc?export=view&id=1vTk34SrwOlgcmstFoDsVVmlH0j3Bt0nm",video));
         productRepository.save(new Product(null,1299.d,"Smart TV LED 32´","AOC, 3 HDMI, 1 USB, Wi-Fi - 32S5195/78G","https://drive.google.com/uc?export=view&id=1cQvcY-VGLsVXhXE_inQguSnGXLkvUfmA",video));
-        productRepository.save(new Product(null,2799.d,"Smart TV LG 55´","4K UHD, WiFi, Bluetooth, HDR, Inteligência Artificial, ThinQ, Smart Magic, Google Alexa - 55UP7750PSB\n","https://drive.google.com/uc?export=view&id=1rTYlX0ifj8UiXST601_zms3HDpahYFfB",video));
+        productRepository.save(new Product(null,2799.d,"Smart TV LG 55´","4K UHD, WiFi, Bluetooth, HDR, Inteligência Artificial, ThinQ, Smart Magic, Google Alexa - 55UP7750PSB","https://drive.google.com/uc?export=view&id=1rTYlX0ifj8UiXST601_zms3HDpahYFfB",video));
         productRepository.save(new Product(null,1424.d,"Smart TV LG 32´","HD 32LM627B, com WiFi e Bluetooth, HDR, ThinQAI compatível com Inteligência Artificial - 32LM627BPSB","https://drive.google.com/uc?export=view&id=1MSdCEoiFrg6wCUVVTnoTSUwhAB_qqCrd",video));
         productRepository.save(new Product(null,2499.d,"Smart TV Philco 50´","PTV50N10N5E, 4K, UHD, LED, HDR10, HDMI/USB/Wi-Fi, Dolby Audio, Conversor Digital, Preto - 99503028","https://drive.google.com/uc?export=view&id=1yGlXHAbiQZ8ElWeiblYbwxy1fd9mFsel",video));
-        productRepository.save(new Product(null,1699.d,"Smart TV Philco 32´","PTV39G65N5CH, HD, LED, HDMI/USB/Wi-Fi, 60Hz, Preto - 99393043","\n" +
-                "https://drive.google.com/uc?export=view&id=12NX2yLf1N6MweJk7JD3Iw09ktOJrFTCb",informatica));
+        productRepository.save(new Product(null,1699.d,"Smart TV Philco 39´","PTV39G65N5CH, HD, LED, HDMI/USB/Wi-Fi, 60Hz, Preto - 99393043","https://drive.google.com/uc?export=view&id=12NX2yLf1N6MweJk7JD3Iw09ktOJrFTCb",video));
 
         //Smartphones
         productRepository.save(new Product(null,4799.d,"iPhone 12","64GB Branco, 5G, Tela de 6.1, Câmera Dupla 12MP + Selfie 12MP - MGJ63BR/A","https://drive.google.com/uc?export=view&id=1sW1e2gdKseJCqyG4cy29hGvDYNsSa3LJ",smartphone));
