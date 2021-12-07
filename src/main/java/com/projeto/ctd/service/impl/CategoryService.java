@@ -5,6 +5,7 @@ import com.projeto.ctd.models.Category;
 import com.projeto.ctd.repository.CategoryRepository;
 import com.projeto.ctd.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,4 +30,5 @@ public class CategoryService implements IService<Category> {
     public List<Category> getAllByName(String type) {
         return repository.findByNameLikeIgnoreCase(type);
     }
+
 }
